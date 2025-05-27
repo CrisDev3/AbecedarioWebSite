@@ -1,0 +1,149 @@
+/* Fuentes y reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f0f4f8; /* Gris muy suave */
+  color: #2c3e50; /* Azul oscuro */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenedor principal para centrar */
+.main-container {
+  flex: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  background: #3498db; /* Azul */
+  color: white;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+  border-radius: 0 0 15px 15px;
+  user-select: none;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.highlight {
+  color: #e67e22; /* Naranja */
+  font-weight: 900;
+  text-shadow: 1px 1px 3px rgba(230, 126, 34, 0.6);
+}
+
+/* Letras - Matriz */
+.letters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Cada letra */
+.letter {
+  text-decoration: none;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(41, 128, 185, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.letter:hover,
+.letter:focus {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 12px 25px rgba(230, 126, 34, 0.8);
+  outline: none;
+}
+
+/* Equipo */
+.team-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  padding: 1.5rem 2rem;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  user-select: none;
+}
+
+.team-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.team-list {
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #34495e;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  background: #ecf0f1;
+  user-select: none;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .letter {
+    font-size: 2.5rem;
+    border-radius: 12px;
+  }
+  .team-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
